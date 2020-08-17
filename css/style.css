@@ -1,0 +1,630 @@
+/* ----------------------
+:Convention de nommage  html css :
+/
+/ utilisation d'une syntaxe librement inspirée de la méthode ABEM montrée par Jeremy dit James  :-)
+/ utilisation d'une grille inspirée de Bootstrap et prévision du responsif avec utilisation des médiaqueries
+/ utilisation des Flexbox
+/ reset : sur li et a
+/
+ --------------------- */
+
+
+/* font*/
+@font-face {
+  font-family: 'Alegreya';
+    src: url('../Alegreya-Medium.ttf');
+}
+/* ici j'ai préféré embarquer la police  via @font-face, plutôt que de faire appel à la font via Internet @import.
+    @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,500&display=swap');
+    */
+
+/* reset */
+li {
+  list-style-type: none;
+}
+li > a {
+  text-decoration: none;
+}
+
+/* Balises générales */
+*{
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; /* utilisation de 1 rem = 10px; */
+}
+
+body {
+  height: 100vh;
+    font-size: 1.6rem;
+    font-family: 'Alegreya', serif;
+    margin: 0;
+    padding: 0;
+    color: #e4d1c3;
+
+}
+
+body.home {
+  background: linear-gradient(to top right, #ff9933 20%, #d94428 44%, #375476 60%, #474649 75%);
+
+}
+body.about {
+  background-color: #ff9933;
+    color: #e4d1c3;
+}
+body.portfolio {
+  background-color: #375476;
+    color: #e4d1c3;
+}
+body.contact {
+  background-color: #474649;
+}
+
+img {
+  width: 100%;
+    height: auto;
+}
+
+/* Balises sémantiques */
+header {
+  margin-bottom: 0.5rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+ /*   border: 1px yellowgreen solid; */
+}
+main {
+  padding: 0 1rem 0.5rem 1rem;
+
+ /* border: 1px solid yellow; */
+}
+h1 {
+  font-size: 4.1rem;
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+h2 {
+  color: #9a786c;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+nav {
+  text-transform: capitalize;
+}
+li > a {
+  color: rgb(255,255,255);
+}
+
+/* Classes générales */
+.wrap {
+  max-width: 1130px;
+    width: 100%;
+    margin: 0 auto;
+
+/*  border: 2px solid green; */
+}
+
+.container {
+  padding-right: 1rem;
+}
+
+/* == header == */
+
+.o-nav {
+    margin-right: 2rem;
+      padding-right: 0.5rem;
+      text-transform: capitalize;
+  }
+.m-nav {
+  display: flex;
+    justify-content: flex-end;
+    margin: 0.5rem 0;
+    padding-bottom: 0.5rem;
+}
+.a-nav__navItem {
+  padding:1rem;
+    color:  #e4d1c3;
+    border-bottom: 1px solid hsl(44, 100%, 50%);
+}
+.a-nav__navItem:hover{
+  color :  #9a786c;
+    padding-bottom: 0.5rem;
+
+}
+.a-nav__navLink {
+  color: inherit;
+}
+
+
+.-isActive {
+  color: white;
+}
+
+/* == main == */
+
+/* le H1 */
+.m-title {
+  margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.a-title__firstletter {
+  font-size: 4.6rem;
+    color: inherit;
+    padding: 1rem 0.6rem 1rem 1.2rem;
+    background: linear-gradient(to top right, #ff9933 20%, #d94428 44%, #375476 60%, #474649 75%);
+    border-radius: 3px;
+}
+.a-title__finalElement {
+  font-size: 55px;
+    color: #9a786c;
+    padding-left: 2px;
+    font-weight: 400;
+}
+.m-title2{
+  font-size: 2.6rem;
+    padding-left: 1rem;
+    color: #e4d1c3;
+  }
+.a-title2__element {
+  padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    color: white;
+}
+
+cite.m-cite__presentation {
+  text-align: center;
+    margin: 3rem auto 2.8rem auto;
+    display: block;
+    font-size: 1.9rem;
+    padding: 0.5rem 1.5rem 1.6rem 1.5rem;
+}
+.a-cite__presentation__finalElement {
+  font-size: 14px;
+}
+
+/* footer */
+
+
+
+
+    /* Classes liées au FORM spécial des pages pour le -  contact  - */
+/*:root {
+    --main-color: white;
+    --accent-color:rgba(0, 0, 0, 0.3); /* dodgerblue; #5e7691
+}
+*/
+.mailNotify{  /* comme si c'était le body du FORM */
+    height: 7rem;
+      padding-top: 0.3rem;
+      padding-bottom: 1rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+}
+
+  .content {
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+      height: 5rem;
+      padding: 1rem; /* VERIFIER en changeant la grandeur */
+      background-color:white;
+      text-align: center;
+      border-radius: 3rem;
+      overflow: hidden;
+      transition: width .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  .contact #singular-form button,
+  .content>#singular-form>#input-container>input {
+    font-size: 2rem;
+      font-weight: bold;
+      color: #5e7691;/* dodgerblue;*/
+      background-color: floralwhite;
+  }
+  .content>#singular-form {
+    position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+  }
+  .content>#singular-form button {
+    width: 9rem;
+      padding: 0;
+      border: none;
+      outline: none;
+      border-radius: 3rem;
+      cursor: pointer;
+  }
+  .content>#singular-form>button#trigger {
+    padding: 0;
+      width: 100%;
+      color: rgba(0, 0, 0, 0.3);
+      background-color: transparent;
+      z-index: 3;
+  }
+  .content>#singular-form>#input-container {
+      z-index: 2;
+  }
+  .content>#singular-form>#input-container>input {
+    display: inline-block;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      box-sizing: border-box;
+      border: none;
+      outline: none;
+      padding: 0 26% 0 3%;
+      opacity: 0;
+      transform: scale(0);
+      transition: all .4s ease .4s;
+  }
+
+  .content>#singular-form>#input-container>button {
+    position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background-color:rgba(0, 0, 0, 0.3);
+      color: white;
+      opacity: 0;
+      transform: scale(0);
+      transition: all .4s ease .4s;
+  }
+  .content>#singular-form>#success {
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(0, 0, 0, 0.3);
+      font-weight: bold;
+      z-index: 1;
+  }
+  .content>#singular-form>button#trigger,
+  .content>#singular-form>#input-container,
+  .content>#singular-form>#success {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: scale(0);
+      opacity: 0;
+  }
+  .content>#singular-form>button#trigger {
+      transition: all .4s ease;
+  }
+  .content>#singular-form>#input-container {
+      transform: scale(1);
+      opacity: 1;
+      transition: all .4s ease .4s;
+  }
+  .content>#singular-form>#success {
+      transition: all .2s ease .4s;
+  }
+  .content>#singular-form>button#trigger.shown,
+  .content>#singular-form>#input-container.shown,
+  .content>#singular-form>#success.shown,
+  .content>#singular-form>#input-container>button.shown,
+  .content>#singular-form>#input-container>input.shown {
+    transform: scale(1);
+      opacity: 1;
+  }
+
+/* Classes liées à la page HOME => index */
+.home .m-img__portrait {
+  width: 32%;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+.home .m-txtAction {
+  display: none;
+}
+
+/* Classes liées à la page A PROPOS */
+.about .m-title2, .portfolio .m-title2, .contact .m-title2 {
+  border-bottom: 1px solid #e4d1c3;
+    padding: 1rem;
+    margin: 0rem 2rem 1rem 1rem;
+    color: #9a786c;
+}
+.about .a-description__liste {
+  list-style-type: square;
+}
+.about .interesse, .about .formation, .about .competences {
+  margin-left: 1rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+.about .color{
+  background-color: /*#afbac8 */ #9ba9ba;
+    color: #375476;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem;
+}
+.m-description{
+  display: flex;
+    flex-direction: column;
+}
+/* Les Times */
+.about .m-title3 {
+  color: #a4857a;
+}
+/* j'insère un span à l'intérieur du h3 afin de grouper les times */
+.about .m-title3.datetime{
+  position: relative;
+    padding-top: 1rem;
+}
+.about .m-title3.datetime > span{
+  position: absolute;
+    top: -1.5rem;
+    color: #e4d1c3;
+}
+.about p + h3 {
+  margin-top: 1px;
+    padding-top: 1px;
+}
+.m-title3.datetime + .a-description__item {
+  background-color: rgba(230, 115, 0, 0.1);
+    margin-top: -1rem;
+    margin-right: 1rem;
+    padding-left: 0.5rem;
+}
+
+/* Classes liées à la page  PORTFOLIO*/
+.portfolio h3{
+  letter-spacing: 0.5rem;
+    line-height: 1.8;
+}
+.portfolio h3:hover {
+  color: #a4857a;
+}
+
+.portfolio .writeform {
+  margin-left: 1rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.portfolio .writeform p {
+  font-size: 2.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+/*
+.portfolio p > a{
+  position: absolute;
+}
+*/
+
+.portfolio .writeform span {
+  color: #a4857a;
+    font-size: 1.9rem;
+    text-shadow: 1px 1px 2px #9ba9ba;
+    font-style: italic;
+}
+
+
+.deco{
+  text-decoration: none;
+    color:  #a4857a;
+}
+.info .a-title3__projet {
+  display: none; /* On masque l'infobulle. */
+  }
+.info:hover, .info:active {
+  background: none; /* Correction d'un bug d'Internet Explorer. */
+    cursor: pointer; /* On change le curseur par défaut par un curseur de main */
+}
+.info:hover .a-title3__projet,
+.info:hover .a-title3__projet:hover,
+.info:active .a-title3__projet:active
+{
+  display: block; /* On affiche l'infobulle. */
+    position: absolute;
+    white-space: nowrap; /* On change la valeur de la propriété
+white-space pour qu'il n'y ait pas de retour à la ligne non désiré.
+*/
+    top: 250px; /* On positionne notre infobulle. */
+    left: 170px;
+    z-index: 100; /* On définit une valeur pour l'ordre d'affichage.*/
+
+    background-repeat: no-repeat;
+    min-width: 255px;
+    min-height: 200px;
+
+}
+.info:hover .a-title3__projet,.info:active .a-title3__projet,
+.info:hover .a-title3__projet:hover,
+.info:active .a-title3__projet:active{
+background-image: url(../images/vignetteSiteZephyrMobile.png);
+    top: 250px; /* On positionne notre infobulle. */
+    left: 170px;
+    z-index: 100; /* On définit une valeur pour l'ordre d'affichage.*/
+}
+.info:hover .a-title3__projet.-Womer, .info:hover .a-title3__projet:hover.-Womer{
+  background-image: url(../images/vignetteWomerMobile.png);
+    top: 450px; /* On positionne notre infobulle. */
+    left: 170px;
+    z-index: 101; /* On définit une valeur pour l'ordre d'affichage.*/
+}
+
+.portfolio .info span{
+  position: relative;
+    color: black;
+    border-bottom: 1px gray dotted; /* On souligne le texte. */
+}
+.portfolio .writeform .a-description__descriptif{
+  font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+/* Classes liées à la page  CONTACT*/
+.contact .m-image__picture {
+  border-left : 1px solid #e4d1c3;
+    border-top: 1px solid #e4d1c3;
+    border-radius:5px;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    margin-left: 0.5rem;
+    margin-top: 4rem;
+    box-shadow: 4px 2px 6px #7e7d7f /* #6b6a6d /* #59585B; */
+
+}
+.contact .a-image__picture{
+  background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+.a-description__item{
+  margin-left: 1rem;
+}
+.contact .m-form__form {
+  background-color:
+  #59585b;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.contact .m-form__form button {
+  font-size: 1.6rem;
+}
+.contact .a-form__form {
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em 2rem 2rem 1rem;
+}
+.contact .a-form__form label {
+  padding-bottom: 0.7rem;
+    padding-left: 0.2rem;
+    padding-top: 0.5rem;
+    text-transform: capitalize;
+}
+.contact .a-form__form input{
+  width: 80%;
+    font-size: 1.6rem;
+
+}
+.contact .a-form__msg {
+  margin: 1.2rem 0.5rem 1rem 0;
+    padding: 1rem 0 1rem 0.4rem;
+    background-color: rgba(255, 153, 51, 0.6);
+    box-shadow: 4px 2px 6px rgba(224,102,65, 0.6);
+    border-radius: 5px;
+    opacity: 0.5;
+    transition: opacity 200ms ease-out;
+
+
+}
+.contact input, textarea, button {
+  border-radius: 5px;
+}
+.contact input{
+  /* correction hack visuel sur Chrome */
+  border-top : #474649;
+    border-left :#474649;
+}
+
+.contact input:placeholder-shown {
+  border: 5px solid rgba(255, 153, 51, 0.6);
+}
+
+.contact input:not(:placeholder-shown)+.contact .a-form__msg {
+  opacity: 1;
+}
+.contact .a-form__button{
+  margin: 1rem 1.3rem 1rem 1rem;
+    padding: 1rem 0;
+    background-color: rgba(255, 153, 51, 0.6);
+    color: #e4d1c3;
+    /* correction hack visuel sur Chrome */
+    border-bottom: #474649;
+    border-right: #474649;
+    text-transform: uppercase;
+
+}
+
+/* --------------------
+
+/* Vue tablette et desktop
+
+/* ------------------------ */
+
+@media screen and (min-width: 640px) {
+  .home .m-img__portrait {
+    width: 51%;
+  }
+  cite.m-cite__presentation {
+    font-size: 2.2rem;
+  }
+  .home .m-txtAction {
+    display: block;
+  }
+  .home .a-txtAction__txt{
+    font-size: 1.8rem;
+      margin-top: 4.4rem;
+  }
+  .home .a-txtAction__tt.-emphase{
+    font-style: italic;
+  }
+  .home .a-txtAction__txt.-lastElement{
+    font-size: 1.9rem;
+      color: white;
+  }
+  .home .a-txtAction__link{
+    display: inline-block;
+      padding: 1rem;
+      margin: 6rem 6rem 2rem 6rem;
+      text-decoration: none;
+      color: whitesmoke;
+      border: 1px solid whitesmoke;
+      border-radius: 25px;
+      background-color: rgba(255,255,255,0.1);
+      text-align: center;
+      font-size: 1.8rem;
+  }
+  .home .a-txtAction__button{
+    font-size: 3rem;
+      color: #9a786c;
+  }
+  .info:hover .a-title3__projet,
+  .info:hover .a-title3__projet:hover{
+  background-image: url(../images/vignetteTabletteZephyr-formation.png);
+    min-width: 300px;
+      min-height: 275px;
+  }
+  .a-title3__projet.-Womer, .a-title3__projet:hover.-Womer{
+  background-image: url(../images/vignetteClientWomer.png);
+    min-width: 300px;
+      min-height: 275px;
+  }
+}
+
+
+@media screen and (min-width: 860px) {
+  .home .m-img__portrait {
+    width: 47%;
+  }
+}
+
+
+@media screen and (min-width: 960px) {
+  .home .m-img__portrait {
+    width: 40%;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .home .m-img__portrait {
+    width: 29%;
+  }
+}
