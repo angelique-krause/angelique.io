@@ -556,7 +556,7 @@ background-image: url(../images/vignetteSiteZephyrMobile.png);
     transition: opacity 200ms ease-out;
 
 }
-.contact input:not(:placeholder-shown) + .a-form__msg {
+.contact input#email:not(:placeholder-shown) + .a-form__msg {
   opacity: 1;
 }
 
