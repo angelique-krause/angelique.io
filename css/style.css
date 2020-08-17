@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  height: 106vh;
+  height: 102vh;
     font-size: 1.6rem;
     font-family: 'Alegreya', serif;
     margin: 0;
@@ -176,7 +176,7 @@ li > a {
 
 cite.m-cite__presentation {
   text-align: center;
-    margin: 3rem auto 2.8rem auto;
+    margin: 2rem auto 2.8rem auto;
     display: block;
     font-size: 1.9rem;
     padding: 0.5rem 1.5rem 1.6rem 1.5rem;
@@ -338,7 +338,7 @@ cite.m-cite__presentation {
     padding-left: 1rem;
 }
 .about .color{
-  background-color: /*#afbac8  #9ba9ba;*/rgba(175, 186, 200, 0.4);
+  background-color: /*#afbac8  #9ba9ba; rgba(175, 186, 200, 0.8);*/ #eff1f4;
     color: #375476;
     padding: 1rem;
     border-radius: 5px;
