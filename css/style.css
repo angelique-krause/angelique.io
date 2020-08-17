@@ -125,6 +125,7 @@ li > a {
 .a-nav__navItem {
   padding:1rem;
     color:  #e4d1c3;
+    font-size: 1.4rem;
     border-bottom: 1px solid hsl(44, 100%, 50%);
 }
 .a-nav__navItem:hover{
@@ -337,11 +338,14 @@ cite.m-cite__presentation {
     padding-left: 1rem;
 }
 .about .color{
-  background-color: /*#afbac8 */ #9ba9ba;
+  background-color: /*#afbac8  #9ba9ba;*/rgba(175, 186, 200, 0.4);
     color: #375476;
     padding: 1rem;
     border-radius: 5px;
     margin: 1rem;
+}
+.about .color:hover{
+  background-color: #9ba9ba;
 }
 .m-description{
   display: flex;
@@ -440,13 +444,13 @@ white-space pour qu'il n'y ait pas de retour à la ligne non désiré.
 .info:hover .a-title3__projet:hover,
 .info:active .a-title3__projet:active{
 background-image: url(../images/vignetteSiteZephyrMobile.png);
-    top: 250px; /* On positionne notre infobulle. */
+    top: 262px; /* On positionne notre infobulle. */
     left: 170px;
     z-index: 100; /* On définit une valeur pour l'ordre d'affichage.*/
 }
 .info:hover .a-title3__projet.-Womer, .info:hover .a-title3__projet:hover.-Womer{
   background-image: url(../images/vignetteWomerMobile.png);
-    top: 450px; /* On positionne notre infobulle. */
+    top: 483px; /* On positionne notre infobulle. */
     left: 170px;
     z-index: 101; /* On définit une valeur pour l'ordre d'affichage.*/
 }
@@ -469,7 +473,7 @@ background-image: url(../images/vignetteSiteZephyrMobile.png);
     padding: 1rem;
     display: flex;
     flex-flow: column;
-    margin-left: 0.5rem;
+
     margin-top: 4rem;
     box-shadow: 4px 2px 6px #7e7d7f /* #6b6a6d /* #59585B; */
 
@@ -548,6 +552,8 @@ background-image: url(../images/vignetteSiteZephyrMobile.png);
     /* correction hack visuel sur Chrome */
     border-bottom: #474649;
     border-right: #474649;
+    border-top: transparent;
+    border-left: transparent;
     text-transform: uppercase;
 
 }
@@ -610,6 +616,9 @@ background-image: url(../images/vignetteSiteZephyrMobile.png);
 
 
 @media screen and (min-width: 860px) {
+  .contact .m-image__picture {
+    margin-left: 0.5rem;
+  }
   .home .m-img__portrait {
     width: 47%;
   }
