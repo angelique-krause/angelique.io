@@ -601,6 +601,9 @@ background-image: url(../images/vignetteSiteZephyrMobile.png);
     font-size: 3rem;
       color: #9a786c;
   }
+  .a-nav__navItem{
+    font-size: 1.6rem;
+  }
   .info:hover .a-title3__projet,
   .info:hover .a-title3__projet:hover{
   background-image: url(../images/vignetteTabletteZephyr-formation.png);
