@@ -1,7 +1,7 @@
 /* afin de permettre le non recopiage du  header et du footer, je crée un fichier script.js qui va contenir une fonction le permettant */
 
 $(function () {
-  $("#header").load("../header.html");
+  $("#header").load("https://angelique-krause.github.io/portfolio-Angelique/header.html");
   // $("#footer").load("../footer.html");
 });
 
