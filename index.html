@@ -14,6 +14,16 @@
   <!-- afin de ne pas devoir RECOPIER le header et le footer sur chacune  des  pages, je passe par un scripte en Jquery grâce à Jeremy -->
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
+  <script>
+
+    $(function () {
+      $("#header").load("./header.html");
+      // $("#footer").load("../footer.html");
+    });
+
+
+  </script>
+
 
 </head>
 
@@ -64,7 +74,7 @@
   </main>
 
 
-  <script src="./js/script.js"></script>
+  <!-- <script src="./js/script.js"></script>-->
 </body>
 
 </html>
