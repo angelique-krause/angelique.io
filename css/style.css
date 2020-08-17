@@ -351,7 +351,7 @@ cite.m-cite__presentation {
     padding-left: 1rem;
 }
 .about .color{
-  background-color: /*#afbac8  #9ba9ba; rgba(175, 186, 200, 0.8);*/ #eff1f4;
+  background-color: /*#afbac8  #9ba9ba; rgba(175, 186, 200, 0.8); #eff1f4;*/rgba(239,241,244, 0.7);
     color: #375476;
     padding: 1rem;
     border-radius: 5px;
@@ -376,7 +376,7 @@ cite.m-cite__presentation {
 .about .m-title3.datetime > span{
   position: absolute;
     top: -1.5rem;
-    color: #e4d1c3;
+    color: #a4857a;
 }
 .about p + h3 {
   margin-top: 1px;
