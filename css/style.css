@@ -42,6 +42,9 @@ body {
     padding: 0;
     color: #e4d1c3;
 
+    /* pour rendre le retour de l'ancre en haut de page plus doux je mets un smooth */
+    scroll-behavior: smooth;
+
 }
 
 body.home {
@@ -185,7 +188,7 @@ cite.m-cite__presentation {
   font-size: 14px;
 }
 .scroll2top{
-  display: block;
+
   position: fixed;
   right: 1.2rem;
   bottom: 4.1rem;
@@ -196,6 +199,14 @@ cite.m-cite__presentation {
   z-index: 9;
   cursor: pointer;
   text-align:center;
+}
+.scroll2top a{
+  color: white;
+  height: 15px;
+  display: block;
+
+
+
 }
 
 /* footer */
