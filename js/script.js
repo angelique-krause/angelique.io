@@ -56,3 +56,18 @@ $(function () {
 
 // sf.input.addEventListener('keypress', (e) => sf.handleInputKeypress(e));
 // document.addEventListener('click', (e) => sf.clickHandler(e));
+
+// je souhaite faire apparaitre les images au click
+
+document.getElementById("btnZephyr, btnZephyrUrl").addEventListener("click", showImg);
+let visible = 0;
+
+function showImg() {
+  if (visible === 0) {
+    document.getElementById("imgZephyr,").className = "visible";
+    visible = 1;
+  } else if (visible === 1) {
+    document.getElementById("imgZephyr").className = "hidden";
+    visible = 0
+  }
+}

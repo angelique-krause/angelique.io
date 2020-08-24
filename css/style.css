@@ -453,18 +453,19 @@ cite.m-cite__presentation {
   background: none; /* Correction d'un bug d'Internet Explorer. */
     cursor: pointer; /* On change le curseur par défaut par un curseur de main */
 }
+/* mise en ligne d'images par infobulle ; remplacé par mise en ligne image via des boutons
 .info:hover .a-title3__projet,
 .info:hover .a-title3__projet:hover,
 .info:active .a-title3__projet:active
 {
-  display: block; /* On affiche l'infobulle. */
+  display: block; /* On affiche l'infobulle.
     position: absolute;
     white-space: nowrap; /* On change la valeur de la propriété
 white-space pour qu'il n'y ait pas de retour à la ligne non désiré.
-*/
-    top: 250px; /* On positionne notre infobulle. */
+
+    top: 250px; /* On positionne notre infobulle.
     left: 170px;
-    z-index: 100; /* On définit une valeur pour l'ordre d'affichage.*/
+    z-index: 100; /* On définit une valeur pour l'ordre d'affichage.
 
     background-repeat: no-repeat;
     min-width: 255px;
@@ -475,26 +476,33 @@ white-space pour qu'il n'y ait pas de retour à la ligne non désiré.
 .info:hover .a-title3__projet:hover,
 .info:active .a-title3__projet:active{
 background-image: url(../images/vignetteSiteZephyrMobile.png);
-    top: 262px; /* On positionne notre infobulle. */
+    top: 262px; /* On positionne notre infobulle.
     left: 170px;
-    z-index: 100; /* On définit une valeur pour l'ordre d'affichage.*/
+    z-index: 100; /* On définit une valeur pour l'ordre d'affichage.
 }
 .info:hover .a-title3__projet.-Womer, .info:hover .a-title3__projet:hover.-Womer{
   background-image: url(../images/vignetteWomerMobile.png);
-    top: 483px; /* On positionne notre infobulle. */
+    top: 483px; /* On positionne notre infobulle.
     left: 170px;
-    z-index: 101; /* On définit une valeur pour l'ordre d'affichage.*/
+    z-index: 101; /* On définit une valeur pour l'ordre d'affichage.
 }
 
 .portfolio .info span{
   position: relative;
     color: black;
-    border-bottom: 1px gray dotted; /* On souligne le texte. */
+    border-bottom: 1px gray dotted; /* On souligne le texte.
 }
+*/
+
 .portfolio .writeform .a-description__descriptif{
   font-size: 1.4rem;
     line-height: 1.3;
 }
+
+.hidden{
+  display: none;
+}
+
 
 /* Classes liées à la page  CONTACT*/
 .contact .m-image__picture {
