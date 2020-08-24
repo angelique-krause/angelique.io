@@ -57,53 +57,33 @@ $(function () {
 // sf.input.addEventListener('keypress', (e) => sf.handleInputKeypress(e));
 // document.addEventListener('click', (e) => sf.clickHandler(e));
 
-// je souhaite faire apparaitre les images au click
+// je souhaite faire apparaitre les images au click sur le boutton
+
 
 document.getElementById("btnZephyr").addEventListener("click", showImg);
 let visible = 0;
 
 function showImg() {
   if (visible === 0) {
-    document.getElementById("imgZephyr").className = "visible";
+    document.getElementById("imgZephyrTab").className = "visible";
     visible = 1;
   } else if (visible === 1) {
-    document.getElementById("imgZephyr").className = "hidden";
+    document.getElementById("imgZephyrTab").className = "hidden";
     visible = 0
   }
 }
+// je fais pareil pour que le boutton me redirige vers le site
 document.getElementById("btnZephyr").addEventListener("click", showImg);
 let visible = 0;
 
 function showImg() {
   if (visible === 0) {
-    document.getElementById("imgZephyr,").className = "visible";
+    document.getElementById("btnZephyrUrl").className = "visible";
     visible = 1;
   } else if (visible === 1) {
-    document.getElementById("imgZephyr").className = "hidden";
+    document.getElementById("btnZephyrUrl").className = "hidden";
     visible = 0
   }
 }
-document.getElementById("btnZephyr").addEventListener("click", showImg);
-let visible = 0;
 
-function showImg() {
-  if (visible === 0) {
-    document.getElementById("imgZephyr").className = "visible";
-    visible = 1;
-  } else if (visible === 1) {
-    document.getElementById("imgZephyr").className = "hidden";
-    visible = 0
-  }
-}
-document.getElementById("btnZephyr").addEventListener("click", showImg);
-let visible = 0;
 
-function showImg() {
-  if (visible === 0) {
-    document.getElementById("imgZephyr").className = "visible";
-    visible = 1;
-  } else if (visible === 1) {
-    document.getElementById("imgZephyr").className = "hidden";
-    visible = 0
-  }
-}
