@@ -74,7 +74,7 @@ function showImg() {
 }
 // je fais pareil pour que le boutton me redirige vers le site
 document.getElementById("btnZephyr").addEventListener("click", showImg);
-let visible = 0;
+
 
 function showImg() {
   if (visible === 0) {
