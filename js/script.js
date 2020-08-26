@@ -1,10 +1,13 @@
 /* afin de permettre le non recopiage du  header et du footer, je crée un fichier script.js qui va contenir une fonction le permettant */
 
 $(function () {
-  $("#header").load("https://angelique-krause.github.io/portfolio-Angelique/header.html");
+  $("#header").load("../header.html");
   // $("#footer").load("../footer.html");
 });
-
+var fileName = location.href.replace(/\.[^/.]+$/, "").split("/").slice(-1);
+$('nav a').each(function () {
+  if ($(this).attr('href') == location.href.split("/").slice(-1)) { $(this).addClass("-isActive"); }
+});
 
 
 /* Je souhaite récupérer les mails des personnes qui veulent des infos sur mon C.V. et je leur propose une ANIMATION , je passerai ensuite par  un mailto */
@@ -73,17 +76,17 @@ function showImg() {
   }
 }
 // je fais pareil pour que le boutton me redirige vers le site
-document.getElementById("btnZephyr").addEventListener("click", showImg);
+// document.getElementById("btnZephyr").addEventListener("click", showImg);
 
 
-function showImg() {
-  if (visible === 0) {
-    document.getElementById("btnZephyrUrl").className = "visible";
-    visible = 1;
-  } else if (visible === 1) {
-    document.getElementById("btnZephyrUrl").className = "hidden";
-    visible = 0
-  }
-}
+// function showImg() {
+//   if (visible === 0) {
+//     document.getElementById("btnZephyrUrl").className = "visible";
+//     visible = 1;
+//   } else if (visible === 1) {
+//     document.getElementById("btnZephyrUrl").className = "hidden";
+//     visible = 0
+//   }
+// }
 
 
